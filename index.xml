@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Never Say Anything Blog</title>
-    <link>w1redch4d.github.io/neversayanything/</link>
+    <link>https://w1redch4d.github.io/neversayanything/</link>
     <description>Recent content on Never Say Anything Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Nov 2024 12:47:35 +0530</lastBuildDate>
-    <atom:link href="w1redch4d.github.io/neversayanything/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://w1redch4d.github.io/neversayanything/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Debugging V8</title>
-      <link>w1redch4d.github.io/neversayanything/post/debugging-v8/</link>
+      <link>https://w1redch4d.github.io/neversayanything/post/debugging-v8/</link>
       <pubDate>Wed, 20 Nov 2024 12:47:35 +0530</pubDate>
-      <guid>w1redch4d.github.io/neversayanything/post/debugging-v8/</guid>
+      <guid>https://w1redch4d.github.io/neversayanything/post/debugging-v8/</guid>
       <description>&lt;h2 id=&#34;debugger-setup&#34;&gt;Debugger Setup&lt;/h2&gt;&#xA;&lt;p&gt;For this blog we will consider the environment to be a debian based linux distro, hence we will use gdb (with pwndbg) to debug v8.&#xA;first lets install &lt;a href=&#34;https://github.com/pwndbg/pwndbg&#34;&gt;pwndbg&lt;/a&gt; by running these commands&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/pwndbg/pwndbg&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd pwndbg&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./setup.sh&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;now for v8 specific helper functions, the v8 source tree provides a bunch of helpful gdb extensions, include them to your &lt;code&gt;~/.gdbinit&lt;/code&gt; as follows&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;source /apth/to/pwndbg/gdbinit.py &lt;span style=&#34;color:#75715e&#34;&gt;# this should be there after installing pwndbg&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;source /path/to/v8/tools/gdb-v8-support.py&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;source /path/to/v8/tools/gdbinit&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;and you are done&lt;/p&gt;</description>
     </item>
     <item>
       <title>V8 Setup</title>
-      <link>w1redch4d.github.io/neversayanything/post/v8-setup/</link>
+      <link>https://w1redch4d.github.io/neversayanything/post/v8-setup/</link>
       <pubDate>Wed, 20 Nov 2024 12:36:40 +0530</pubDate>
-      <guid>w1redch4d.github.io/neversayanything/post/v8-setup/</guid>
+      <guid>https://w1redch4d.github.io/neversayanything/post/v8-setup/</guid>
       <description>&lt;h2 id=&#34;getting-the-v8-source&#34;&gt;Getting the v8 source&lt;/h2&gt;&#xA;&lt;p&gt;For this blog we will be focusing mostly on the setup in linux, for macOS and windows you can find the documentation on the &lt;a href=&#34;https://v8.dev/docs&#34;&gt;v8&amp;rsquo;s offical website&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;considering that you have git install , first let us setup &lt;code&gt;depot_tools&lt;/code&gt; using the following commands:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Add &lt;code&gt;depot_tools&lt;/code&gt; to the front of your PATH (you will probably want to put this in your &lt;code&gt;~/.bashrc&lt;/code&gt; or &lt;code&gt;~/.zshrc&lt;/code&gt;). Assuming you cloned &lt;code&gt;depot_tools&lt;/code&gt; to &lt;code&gt;/path/to/depot_tools&lt;/code&gt;:&lt;/p&gt;</description>
     </item>
   </channel>
