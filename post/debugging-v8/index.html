@@ -7,13 +7,34 @@
 	<title>Debugging V8 | Never Say Anything Blog</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<link rel="stylesheet" href="/neversayanything/css/bundle.css">
-	<link rel="icon" href="/neversayanything/icons/16.png" sizes="16x16" type="image/png">
-	<link rel="icon" href="/neversayanything/icons/32.png" sizes="32x32" type="image/png">
+		<meta property="og:url" content="w1redch4d.github.io/neversayanything/post/debugging-v8/">
+  <meta property="og:site_name" content="Never Say Anything Blog">
+  <meta property="og:title" content="Debugging V8">
+  <meta property="og:description" content="Debugger Setup For this blog we will consider the environment to be a debian based linux distro, hence we will use gdb (with pwndbg) to debug v8. first lets install pwndbg by running these commands
+git clone https://github.com/pwndbg/pwndbg cd pwndbg ./setup.sh now for v8 specific helper functions, the v8 source tree provides a bunch of helpful gdb extensions, include them to your ~/.gdbinit as follows
+source /apth/to/pwndbg/gdbinit.py # this should be there after installing pwndbg source /path/to/v8/tools/gdb-v8-support.py source /path/to/v8/tools/gdbinit and you are done">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-11-20T12:47:35+05:30">
+    <meta property="article:modified_time" content="2024-11-20T12:47:35+05:30">
+
+		
+  <meta itemprop="name" content="Debugging V8">
+  <meta itemprop="description" content="Debugger Setup For this blog we will consider the environment to be a debian based linux distro, hence we will use gdb (with pwndbg) to debug v8. first lets install pwndbg by running these commands
+git clone https://github.com/pwndbg/pwndbg cd pwndbg ./setup.sh now for v8 specific helper functions, the v8 source tree provides a bunch of helpful gdb extensions, include them to your ~/.gdbinit as follows
+source /apth/to/pwndbg/gdbinit.py # this should be there after installing pwndbg source /path/to/v8/tools/gdb-v8-support.py source /path/to/v8/tools/gdbinit and you are done">
+  <meta itemprop="datePublished" content="2024-11-20T12:47:35+05:30">
+  <meta itemprop="dateModified" content="2024-11-20T12:47:35+05:30">
+  <meta itemprop="wordCount" content="153">
+	<link rel="stylesheet" href="w1redch4d.github.io/neversayanything/css/bundle.css">
+	<link rel="stylesheet" href="/w1redch4d.github.io/neversayanything/css/custom.css">
+	<link rel="icon" href="/w1redch4d.github.io/neversayanything/icons/16.png" sizes="16x16" type="image/png">
+	<link rel="icon" href="/w1redch4d.github.io/neversayanything/icons/32.png" sizes="32x32" type="image/png">
 </head>
 <body class="body kind-page">
 	<header class="header">
-	<a class="logo" href="/neversayanything/">Never Say Anything Blog</a>
+	<a class="logo" href="/w1redch4d.github.io/neversayanything/">Never Say Anything Blog</a>
 	
 </header>
 	<div class="primary">
@@ -38,11 +59,11 @@ first lets install <a href="https://github.com/pwndbg/pwndbg">pwndbg</a> by runn
 <p>Lets check our gdb debugging setup for v8 as follows:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gdb /path/to/v8/out/x64.debug/d8
 </span></span></code></pre></div><p>The output should look something as such:</p>
-<p><img src="image.png" alt="alt text"></p>
+<p><img src="../image.png" alt="alt text"></p>
 <p>lets see if we can inspect objects:</p>
-<p><img src="image-1.png" alt="alt text"></p>
+<p><img src="../image-1.png" alt="alt text"></p>
 <p>i will get to the structure on how objects are stored in v8 later on, but first lets see if we can use v8 gdb macros useful for inspection</p>
-<p><img src="image-2.png" alt="alt text"></p>
+<p><img src="../image-2.png" alt="alt text"></p>
 <p>seems like we can, hence our debug setup is ready to go</p>
 </div>
 				
@@ -50,6 +71,15 @@ first lets install <a href="https://github.com/pwndbg/pwndbg">pwndbg</a> by runn
 		</div>
 	</main>
 	
+<div class="authorbox block">
+	<div class="author">
+		<div class="author__body">
+			<div class="author__name">
+				
+			</div>
+		</div>
+	</div>
+</div>
 	
 
 
@@ -58,7 +88,10 @@ first lets install <a href="https://github.com/pwndbg/pwndbg">pwndbg</a> by runn
 
 	</div>
 	<footer class="footer">
-	<div class="footer__copyright">© 2024 Never Say Anything Blog. <span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/vimux/binario" rel="nofollow noopener" target="_blank">Binario</a> theme.</span></div>
+	<div class="footer__copyright">© 2024 Binario. <span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/vimux/binario" rel="nofollow noopener" target="_blank">Binario</a> theme.</span></div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+
+<script src="/w1redch4d.github.io/neversayanything/js/custom.js"></script>
 </body>
 </html>
